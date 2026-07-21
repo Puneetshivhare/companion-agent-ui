@@ -40,8 +40,8 @@ export default function WaitlistButton({
 
   const triggerClass =
     variant === "nav"
-      ? "rounded-md border border-line px-4 py-2 text-[13px] font-medium text-ink transition-transform duration-300 ease-out hover:scale-[1.04]"
-      : "inline-block rounded-md bg-ink px-6 py-3 text-[13px] font-medium text-white transition-transform duration-300 ease-out hover:scale-[1.04]";
+      ? "rounded-full border border-line px-5 py-2 text-[13px] font-medium text-ink transition-transform duration-300 ease-out hover:scale-[1.04]"
+      : "inline-block rounded-full border border-line bg-surfaceCard px-6 py-3 text-[13px] font-medium text-ink transition-transform duration-300 ease-out hover:scale-[1.04]";
 
   return (
     <>
@@ -55,27 +55,27 @@ export default function WaitlistButton({
           onClick={() => setOpen(false)}
         >
           <div
-            className="w-full max-w-[420px] rounded-lg bg-white p-8 shadow-xl"
+            className="w-full max-w-[420px] rounded-2xl bg-surfaceCard p-8 shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
             {status === "sent" ? (
               <>
-                <p className="text-[16px] font-semibold">You&apos;re on the list.</p>
-                <p className="mt-2 text-[13px] leading-relaxed text-mute">
+                <p className="text-[16px] font-medium text-ink">You&apos;re on the list.</p>
+                <p className="mt-2 text-[13px] leading-relaxed text-copy">
                   Thanks — I&apos;ll reach out when there&apos;s a slot to try{" "}
                   {content.projectName}.
                 </p>
                 <button
                   onClick={() => setOpen(false)}
-                  className="mt-6 rounded-md bg-ink px-4 py-2 text-[13px] font-medium text-white"
+                  className="mt-6 rounded-full bg-ink px-4 py-2 text-[13px] font-medium text-white"
                 >
                   Close
                 </button>
               </>
             ) : (
               <>
-                <p className="text-[16px] font-semibold">Join the waitlist</p>
-                <p className="mt-2 text-[13px] leading-relaxed text-mute">
+                <p className="text-[16px] font-medium text-ink">Join the waitlist</p>
+                <p className="mt-2 text-[13px] leading-relaxed text-copy">
                   This is a personal project and isn&apos;t publicly hosted (rate limits + data
                   resourcing). Leave your email and I&apos;ll reach out — or fork the repo and
                   run it yourself.
@@ -87,7 +87,7 @@ export default function WaitlistButton({
                     placeholder="Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full rounded-md border border-line px-3 py-2 text-[13px] outline-none focus:border-ink"
+                    className="w-full rounded-full border border-line px-4 py-2 text-[13px] outline-none focus:border-ink"
                   />
                   <input
                     required
@@ -95,20 +95,20 @@ export default function WaitlistButton({
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full rounded-md border border-line px-3 py-2 text-[13px] outline-none focus:border-ink"
+                    className="w-full rounded-full border border-line px-4 py-2 text-[13px] outline-none focus:border-ink"
                   />
                   <div className="flex gap-2 pt-1">
                     <button
                       type="submit"
                       disabled={status === "sending"}
-                      className="flex-1 rounded-md bg-ink px-4 py-2 text-[13px] font-medium text-white disabled:opacity-60"
+                      className="flex-1 rounded-full bg-ink px-4 py-2 text-[13px] font-medium text-white disabled:opacity-60"
                     >
                       {status === "sending" ? "Sending..." : "Join waitlist"}
                     </button>
                     <button
                       type="button"
                       onClick={() => setOpen(false)}
-                      className="rounded-md border border-line px-4 py-2 text-[13px] font-medium text-ink"
+                      className="rounded-full border border-line px-4 py-2 text-[13px] font-medium text-ink"
                     >
                       Cancel
                     </button>

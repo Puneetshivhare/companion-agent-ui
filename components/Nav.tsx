@@ -3,9 +3,9 @@ import WaitlistButton from "./WaitlistButton";
 
 export default function Nav() {
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-white/80 backdrop-blur">
-      <div className="mx-auto flex max-w-content items-center justify-between px-6 py-6">
-        <span className="flex items-center gap-2 text-[15px] font-semibold tracking-tight">
+    <header className="sticky top-0 z-50 border-b border-line bg-canvas/85 backdrop-blur">
+      <div className="mx-auto flex max-w-content items-center justify-between px-6 py-5">
+        <span className="flex items-center gap-2 text-[15px] font-medium tracking-tight">
           <span aria-hidden>{content.icon}</span>
           {content.projectName}
         </span>
@@ -15,7 +15,7 @@ export default function Nav() {
             href={content.githubUrl}
             target="_blank"
             rel="noreferrer"
-            className="rounded-md bg-ink px-4 py-2 text-[13px] font-medium text-white transition-transform duration-300 ease-out hover:scale-[1.04]"
+            className="rounded-full bg-ink px-5 py-2 text-[13px] font-medium text-white transition-transform duration-300 ease-out hover:scale-[1.04]"
           >
             View on GitHub
           </a>

@@ -2,7 +2,7 @@ import { content } from "@/content";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-line px-6 py-8">
+    <footer className="border-t border-line bg-canvasSoft px-6 py-8">
       <div className="mx-auto flex max-w-content items-center justify-between text-[12px] text-mute">
         <span>{content.projectName}</span>
         <span>Built by Puneet Shivhare</span>
