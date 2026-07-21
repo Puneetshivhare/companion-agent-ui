@@ -13,8 +13,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease }}
-          className="mb-4 text-[12px] font-medium uppercase tracking-wide text-amber"
+          className="mb-4 flex items-center gap-2 text-[12px] font-medium uppercase tracking-wide text-amber"
         >
+          <span aria-hidden>{content.icon}</span>
           {content.status}
         </motion.p>
         <motion.h1

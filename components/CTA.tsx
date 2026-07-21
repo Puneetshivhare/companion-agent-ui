@@ -1,4 +1,5 @@
 import { content } from "@/content";
+import WaitlistButton from "./WaitlistButton";
 
 export default function CTA() {
   return (
@@ -10,14 +11,22 @@ export default function CTA() {
         <p className="mx-auto mt-3 max-w-[480px] text-[14px] text-mute">
           Full source, architecture docs, and setup instructions are on GitHub.
         </p>
-        <a
-          href={content.githubUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-8 inline-block rounded-md bg-ink px-6 py-3 text-[13px] font-medium text-white transition-transform duration-300 ease-out hover:scale-[1.04]"
-        >
-          View source on GitHub
-        </a>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href={content.githubUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-md bg-ink px-6 py-3 text-[13px] font-medium text-white transition-transform duration-300 ease-out hover:scale-[1.04]"
+          >
+            View source on GitHub
+          </a>
+          <WaitlistButton label="Join the waitlist" variant="cta" />
+        </div>
+        <p className="mx-auto mt-8 max-w-[520px] text-[12px] leading-relaxed text-mute">
+          This is a personal project and isn&apos;t publicly hosted, to keep rate limits and
+          data resourcing manageable. Want to try it? Join the waitlist above or fork the repo
+          and run it yourself.
+        </p>
       </div>
     </section>
   );
