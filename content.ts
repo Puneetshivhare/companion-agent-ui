@@ -34,5 +34,7 @@ export const content = {
   ],
   architecture: ["React frontend", "FastAPI agent service", "Groq + agno brain", "Deepgram voice"],
   githubUrl: "https://github.com/Puneetshivhare/Companion_Agent",
-  status: "Active development",
+  // Category eyebrow — not a dev-stage indicator. Access is limited by
+  // rate limits / data resourcing, not by how finished the project is.
+  status: "Voice AI Companion",
 };
