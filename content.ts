@@ -1,5 +1,6 @@
 export const content = {
   projectName: "Sakshi AI Companion",
+  icon: "🎙️",
   tagline: "A voice-first AI companion with real memory and sub-second replies.",
   description:
     "Sakshi is a voice AI companion with long-term memory, web search, and document RAG — built for real-time, low-latency conversation, not chatbot round-trips.",

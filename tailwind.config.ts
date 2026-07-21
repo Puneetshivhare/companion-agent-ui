@@ -8,7 +8,7 @@ const config: Config = {
         ink: "#111113",
         mute: "#6b6b70",
         line: "#e5e5e8",
-        amber: "#b98a1a",
+        amber: "#db2777",
       },
       fontFamily: {
         sans: [
